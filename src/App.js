@@ -7,7 +7,7 @@ import '@aws-amplify/ui-react/styles.css';
 function App() {
   return (
     <Authenticator>
-      {({ signOut, user })}
+      {({ signOut, user }) => (
     <div className="App">
       <header>
         <p>
@@ -18,6 +18,7 @@ function App() {
       </header>
       <button onClick={signOut}>Sign out</button>
     </div>
+      )}
     </Authenticator>
   );
 }
