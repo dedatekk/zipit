@@ -1,0 +1,12 @@
+{
+  "resourceName": "s3zipitstoraged3gxwxxosmkmkf",
+  "bucketName": "zipit-storage-d3gxwxxosmkmkf",
+  "policyUUID": "fbabb1f3",
+  "storageAccess": "auth",
+  "guestAccess": [],
+  "authAccess": [
+    "CREATE_AND_UPDATE",
+    "READ",
+    "DELETE"
+  ]
+}

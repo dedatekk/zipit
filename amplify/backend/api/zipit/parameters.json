@@ -1,5 +1,12 @@
 {
   "AppSyncApiName": "zipit",
   "DynamoDBBillingMode": "PAY_PER_REQUEST",
-  "DynamoDBEnableServerSideEncryption": false
+  "DynamoDBEnableServerSideEncryption": false,
+  "AuthModeLastUpdated": "2022-01-07T15:17:47.649Z",
+  "AuthCognitoUserPoolId": {
+    "Fn::GetAtt": [
+      "authzipit",
+      "Outputs.UserPoolId"
+    ]
+  }
 }

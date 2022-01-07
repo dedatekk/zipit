@@ -3,10 +3,25 @@
   "serviceConfiguration": {
     "apiName": "zipit",
     "serviceName": "AppSync",
-    "gqlSchemaPath": "D:\\zipit\\amplify\\backend\\api\\zipit\\schema.graphql",
+    "gqlSchemaPath": "/tmp/amplify-b831e26f-aaf7-434b-9e25-afa3bd887bc7/amplify/backend/api/zipit/schema.graphql",
     "defaultAuthType": {
       "mode": "API_KEY",
-      "expirationTime": 7
-    }
+      "keyDescription": "api key description",
+      "expirationTime": 30
+    },
+    "conflictResolution": {
+      "defaultResolutionStrategy": {
+        "type": "AUTOMERGE"
+      }
+    },
+    "additionalAuthTypes": [
+      {
+        "mode": "AWS_IAM"
+      },
+      {
+        "mode": "AMAZON_COGNITO_USER_POOLS",
+        "cognitoUserPoolId": "authzipit"
+      }
+    ]
   }
 }

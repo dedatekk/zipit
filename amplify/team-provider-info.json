@@ -10,6 +10,11 @@
       "StackName": "amplify-zipit-dev-01345",
       "StackId": "arn:aws:cloudformation:ap-southeast-2:350696154326:stack/amplify-zipit-dev-01345/a79ffbd0-6fbb-11ec-9043-06438773c926",
       "AmplifyAppId": "d3gxwxxosmkmkf"
+    },
+    "categories": {
+      "auth": {
+        "zipit": {}
+      }
     }
   }
 }
