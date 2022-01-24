@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-//test commit 1
+//Commit test
 function App() {
   return (
     <div className="App">
