@@ -9,13 +9,13 @@ const App = () => {
   return (
     <>
       <CssBaseline />
-      <Header />
-      <Grid container spacing={3} style={{ width: '100%' }}>
+      
+      <Grid container spacing={3} style={{ width: '100%', height: '100%' }}>
         <Grid item xs={12} md={12}>
           <Map />
         </Grid>
       </Grid>
-      <Body />
+      
     </>
   );
 }
