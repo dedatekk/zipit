@@ -1,23 +1,45 @@
 import React from "react";
 import { CssBaseline, Grid } from "@material-ui/core";
-import PlacesAutocomplete,{ getcodeByAddress, getLatLng} from "react-places-autocomplete";
+import PlacesAutocomplete, {
+  getcodeByAddress,
+  getLatLng,
+} from "react-places-autocomplete";
 import Map from "./components/Map/Map";
 
 const App = () => {
   const [address, setAddress] = React.useState("");
+  // const { coordinates, setCoordinates } = React.useState({
+  //   lat: null,
+  //   lng: null,
+  // });
   const handleSelect = async (value) => {};
+
   return (
-    //{...getInputProps({ placeholder: "Type address" })}
     <>
       <PlacesAutocomplete
         value={address}
         onChange={setAddress}
         onSelect={handleSelect}
       >
-        {({getInputProps, suggestions, getSuggestionItemProps, loading}) => (
+        {({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (
           <div>
-            
+            <p>Latitude: </p>
+            <p>Longditude: </p>
             <input {...getInputProps({ placeholder: "Type address" })} />
+            <div>
+              {loading ? <div>...loading</div> : null}
+              {suggestions.map((suggestion) => {
+                const style = {
+                  backgroundColor: suggestion.active ? "#41b6e6" : "#fff",
+                };
+                console.log(suggestion);
+                return (
+                  <div {...getSuggestionItemProps(suggestion, { style })}>
+                    {suggestion.description}
+                  </div>
+                );
+              })}
+            </div>
           </div>
         )}
       </PlacesAutocomplete>
